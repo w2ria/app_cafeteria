@@ -1,6 +1,7 @@
 # Default ignored files
 /shelf/
-/workspace.xml
+.workspace.xml
+
 # Android Studio specific files
 *.iml
 .gradle/
@@ -33,41 +34,19 @@ native/
 
 # Gradle files
 .gradle/
-build/
-**/build/
-**/outputs/
-**/generated/
-**/intermediates/
-
-# Miscellaneous
-*.class
-*.apk
-*.ap_
-*.dex
-*.so
-*.aar
-*.jar
-*.war
-*.war
-*.kotlin_metadata
-
-# Android Studio files
-.idea/
-*.iml
-
-# Android Studio generated files
-build/
-out/
-local.properties
-
-# Gradle files
-.gradle/
-build/
 **/build/
 **/outputs/
 **/generated/
 **/intermediates/
 **/resources/
+
+# Miscellaneous
+*.apk
+*.ap_
+*.dex
+*.so
+*.aar
+*.kotlin_metadata
 
 # IntelliJ IDEA specific files
 *.ipr
@@ -83,7 +62,13 @@ build/
 *.bak
 *.orig
 *.DS_Store
-*.db
 
 # JUnit
 test-*.xml
+
+# Additional gradle files
+.gradle/8.7/
+.gradle/8.7/checksums/
+.gradle/8.7/dependencies-accessors/
+.idea/gradle.xml
+.idea/misc.xml
