@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">app_utp_cafeteria</string>
+    <string name="app_name">Cafetería UTP</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_search">Buscar</string>
+    <string name="title_order">Órdenes</string>
+    <string name="title_profile">Perfil</string>
 </resources>
