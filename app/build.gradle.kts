@@ -42,8 +42,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("androidx.navigation:navigation-fragment:2.8.2")
-    implementation("androidx.navigation:navigation-ui:2.8.2")
+    implementation("androidx.navigation:navigation-fragment:2.8.3")
+    implementation("androidx.navigation:navigation-ui:2.8.3")
     implementation("org.postgresql:postgresql:42.5.3")
     implementation("com.zaxxer:HikariCP:4.0.3")
 }

@@ -9,7 +9,7 @@
         android:id="@+id/navigation_home"
         android:name="com.cafeteria.app_utp_cafeteria.presentation.view.inicio.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_search"
