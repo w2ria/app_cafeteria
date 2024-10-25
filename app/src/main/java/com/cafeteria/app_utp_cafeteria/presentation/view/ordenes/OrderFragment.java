@@ -1,34 +1,37 @@
 package com.cafeteria.app_utp_cafeteria.presentation.view.ordenes;
 
-import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.cafeteria.app_utp_cafeteria.R;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.cafeteria.app_utp_cafeteria.databinding.FragmentOrderBinding;
 
 public class OrderFragment extends Fragment {
 
-    public static OrderFragment newInstance() {
-        return new OrderFragment();
-    }
+    private FragmentOrderBinding binding;
 
-    private OrderViewModel mViewModel;
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        OrderViewModel orderViewModel =
+                new ViewModelProvider(this).get(OrderViewModel.class);
+
+        binding = FragmentOrderBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        final TextView textView = binding.textOrder;
+        orderViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        return root;
+    }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_order, container, false);
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(OrderViewModel.class);
-        // TODO: Use the ViewModel
-    }
-
 }
