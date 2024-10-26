@@ -14,7 +14,7 @@
         android:icon="@drawable/icon_order"
         android:title="@string/title_order" />
     <item
-        android:id="@+id/navigation_user"
+        android:id="@+id/navigation_profile"
         android:icon="@drawable/icon_profile"
         android:title="@string/title_profile" />
 

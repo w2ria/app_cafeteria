@@ -1,4 +1,4 @@
-package com.cafeteria.app_utp_cafeteria.data.local.database;
+/*package com.cafeteria.app_utp_cafeteria.data.local.database;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -27,7 +27,7 @@ public class DatabaseConnection {
         HikariConfig config = new HikariConfig();
 
         // Cargar propiedades desde el archivo
-        try (InputStream input = DatabaseConnection.class.getClassLoader().getResourceAsStream("config/database.properties")) {
+        try (InputStream input = Objects.requireNonNull(DatabaseConnection.class.getClassLoader()).getResourceAsStream("../../../config/database.properties")) {
             if (input == null) {
                 throw new IOException("No se pudo encontrar el archivo de propiedades");
             }
@@ -53,3 +53,4 @@ public class DatabaseConnection {
         }
     }
 }
+*/
