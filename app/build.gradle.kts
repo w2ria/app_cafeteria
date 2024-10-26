@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.cafeteria.app_utp_cafeteria"
-        minSdk = 23
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -45,8 +45,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("androidx.navigation:navigation-fragment:2.8.3")
-    implementation("androidx.navigation:navigation-ui:2.8.3")
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+    implementation("org.postgresql:postgresql:42.2.9")
 
     //implementation ("com.impossibl.pgjdbc-ng:pgjdbc-ng:0.8.6")
 
