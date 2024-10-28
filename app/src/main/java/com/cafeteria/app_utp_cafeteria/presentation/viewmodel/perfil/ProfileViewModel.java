@@ -1,17 +1,17 @@
-package com.cafeteria.app_utp_cafeteria.presentation.view.ordenes;
+package com.cafeteria.app_utp_cafeteria.presentation.viewmodel.perfil;
 
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class OrderViewModel extends ViewModel {
+public class ProfileViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public OrderViewModel() {
+    public ProfileViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Order fragment");
+        mText.setValue("This is Profile fragment");
     }
 
     public LiveData<String> getText() {

@@ -1,17 +1,17 @@
-package com.cafeteria.app_utp_cafeteria.presentation.view.perfil;
+package com.cafeteria.app_utp_cafeteria.presentation.viewmodel.inicio;
 
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ProfileViewModel extends ViewModel {
+public class HomeViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public ProfileViewModel() {
+    public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Profile fragment");
+        mText.setValue("This is Home fragment");
     }
 
     public LiveData<String> getText() {

@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.cafeteria.app_utp_cafeteria.databinding.FragmentProfileBinding;
+import com.cafeteria.app_utp_cafeteria.presentation.viewmodel.perfil.ProfileViewModel;
 
 
 public class ProfileFragment extends Fragment {

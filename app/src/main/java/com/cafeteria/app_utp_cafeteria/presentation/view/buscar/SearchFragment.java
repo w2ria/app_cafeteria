@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.cafeteria.app_utp_cafeteria.databinding.FragmentSearchBinding;
+import com.cafeteria.app_utp_cafeteria.presentation.viewmodel.buscar.SearchViewModel;
 
 public class SearchFragment extends Fragment {
 

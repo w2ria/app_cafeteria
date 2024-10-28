@@ -1,17 +1,17 @@
-package com.cafeteria.app_utp_cafeteria.presentation.view.inicio;
+package com.cafeteria.app_utp_cafeteria.presentation.viewmodel.buscar;
 
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class SearchViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public SearchViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Home fragment");
+        mText.setValue("This is Search fragment");
     }
 
     public LiveData<String> getText() {

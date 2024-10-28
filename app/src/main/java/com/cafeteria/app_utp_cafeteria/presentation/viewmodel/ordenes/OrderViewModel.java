@@ -1,17 +1,17 @@
-package com.cafeteria.app_utp_cafeteria.presentation.view.buscar;
+package com.cafeteria.app_utp_cafeteria.presentation.viewmodel.ordenes;
 
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SearchViewModel extends ViewModel {
+public class OrderViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public SearchViewModel() {
+    public OrderViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Search fragment");
+        mText.setValue("This is Order fragment");
     }
 
     public LiveData<String> getText() {
