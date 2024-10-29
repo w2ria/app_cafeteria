@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="fondo_principal">#E3ECF1</color>
+    <color name="boton_principal">#682BED</color>
+    <color name="boton_atras">#F03E61</color>
+    <color name="campo_texto">#FFFFFF</color>
+    <color name="borde_campo">#90A2C2</color>
+    <color name="yellow">#FFFFEB3B</color>
+    <color name="orange">#FFFF9800</color>
+    <color name="purple">#FF9C27B0</color>
+    <color name="pink">#FFFF4081</color>
+    <color name="brown">#FF795548</color>
+    <color name="teal">#FF009688</color>
+    <color name="cyan">#FF00BCD4</color>
+    <color name="indigo">#FF3F51B5</color>
+    <color name="lime">#FF00E676</color>
+    <color name="amber">#FFFFC107</color>
+    <color name="deep_orange">#FFFF5722</color>
+    <color name="grey">#FF9E9E9E</color>
+    <color name="blue_grey">#FF607D8B</color>
+    <color name="light_blue">#FF03A9F4</color>
+    <color name="light_green">#FF8BC34A</color>
+    <color name="light_pink">#FFFF79A7</color>
+    <color name="light_purple">#FFAA66CC</color>
+    <color name="light_red">#FFFF8A80</color>
+
 </resources>
