@@ -1,3 +1,78 @@
+# Default ignored files
+/shelf/
+.workspace.xml
+
+# Android Studio specific files
+*.iml
+.gradle/
+build/
+local.properties
+.idea/
+*.hprof
+
+# User-specific configurations
+.DS_Store
+*.log
+*.orig
+
+# Generated files
+captures/
+output/
+
+# External libraries
+.externalNativeBuild/
+.cxx/
+
+# Android NDK
+obj/
+jniLibs/
+native/
+
+# Keystore files
+*.jks
+*.keystore
+
+# Gradle files
+.gradle/
+**/build/
+**/outputs/
+**/generated/
+**/intermediates/
+**/resources/
+
+# Miscellaneous
+*.apk
+*.ap_
+*.dex
+*.so
+*.aar
+*.kotlin_metadata
+
+# IntelliJ IDEA specific files
+*.ipr
+*.iws
+
+# Logs
+*.log
+
+# IDE Specific
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*.DS_Store
+
+# JUnit
+test-*.xml
+
+# Additional gradle files
+.gradle/8.7/
+.gradle/8.7/checksums/
+.gradle/8.7/dependencies-accessors/
+.idea/gradle.xml
+.idea/misc.xml
+
 *.iml
 .gradle
 /local.properties
