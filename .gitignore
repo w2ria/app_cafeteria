@@ -13,3 +13,25 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Ignore all .idea folder content
+.idea/
+
+# Except for the following essential files:
+!.idea/misc.xml
+!.idea/modules.xml
+!.idea/vcs.xml
+!.idea/workspace.xml  # optional, if you want to keep project window configurations
+
+# Ignore specific .idea subfolders
+.idea/**/caches
+.idea/**/deploymentTargetSelector.xml
+.idea/**/deviceStreaming.xml
+.idea/**/gradle.xml
+.idea/**/kotlinlc.xml
+.idea/**/migrations.xml
+
+# Android Studio specific files
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+
