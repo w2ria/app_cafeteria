@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "app_cafeteria_utp"
+rootProject.name = "app_cafeteria"
 include(":app")
  

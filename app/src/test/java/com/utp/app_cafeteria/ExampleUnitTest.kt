@@ -1,4 +1,4 @@
-package com.utp.app_cafeteria_utp
+package com.utp.app_cafeteria
 
 import org.junit.Test
 
