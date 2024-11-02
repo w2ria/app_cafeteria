@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/navigation_inicio"
+    android:id="@+id/mobile_navigation">
+
+    <fragment
+    android:id="@+id/navigation_inicio"
+    android:name="com.utp.app_cafeteria.presentation.view.screens.home.InicioFragment"
+    android:label="@string/title_home"
+    tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/navigation_buscar"
+        android:name="com.utp.app_cafeteria.presentation.view.screens.search.BuscarFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_buscar"/>
+
+    <fragment
+        android:id="@+id/navigation_ordenes"
+        android:name="com.utp.app_cafeteria.presentation.view.screens.order.OrdenesFragment"
+        android:label="@string/title_order"
+        tools:layout="@layout/fragment_ordenes"/>
+
+    <fragment
+        android:id="@+id/navigation_perfil"
+        android:name="com.utp.app_cafeteria.presentation.view.screens.profile.PerfilFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_perfil"/>
+
+</navigation>
