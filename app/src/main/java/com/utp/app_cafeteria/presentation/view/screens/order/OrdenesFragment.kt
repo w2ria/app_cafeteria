@@ -1,32 +1,43 @@
 package com.utp.app_cafeteria.presentation.view.screens.order
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.utp.app_cafeteria.R
-import com.utp.app_cafeteria.presentation.viewmodel.order.OrdenesViewModel
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.utp.app_cafeteria.databinding.FragmentOrdenesBinding
+import com.utp.app_cafeteria.presentation.viewmodel.screens.order.OrdenesViewModel
 
 class OrdenesFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = OrdenesFragment()
-    }
+    private var _binding: FragmentOrdenesBinding? = null
 
-    private val viewModel: OrdenesViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // TODO: Use the ViewModel
-    }
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_ordenes, container, false)
+        val OrdenesViewModel =
+            ViewModelProvider(this).get(OrdenesViewModel::class.java)
+
+        _binding = FragmentOrdenesBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+
+        val textView: TextView = binding.textOrder
+        OrdenesViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
+        return root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

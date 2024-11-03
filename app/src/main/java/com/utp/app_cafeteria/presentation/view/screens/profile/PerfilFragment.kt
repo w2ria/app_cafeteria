@@ -1,32 +1,42 @@
 package com.utp.app_cafeteria.presentation.view.screens.profile
-
-import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.utp.app_cafeteria.R
-import com.utp.app_cafeteria.presentation.viewmodel.profile.PerfilViewModel
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.utp.app_cafeteria.databinding.FragmentPerfilBinding
+import com.utp.app_cafeteria.presentation.viewmodel.screens.profile.PerfilViewModel
 
 class PerfilFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = PerfilFragment()
-    }
+    private var _binding: FragmentPerfilBinding? = null
 
-    private val viewModel: PerfilViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // TODO: Use the ViewModel
-    }
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_perfil, container, false)
+        val perfilViewModel =
+            ViewModelProvider(this).get(PerfilViewModel::class.java)
+
+        _binding = FragmentPerfilBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+
+        val textView: TextView = binding.textProfile
+        perfilViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
+        return root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
