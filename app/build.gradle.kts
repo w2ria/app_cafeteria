@@ -52,6 +52,9 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.material.v180) // O la versión más reciente
+
+
     implementation("org.postgresql:postgresql:42.6.0")
 
 }
