@@ -29,4 +29,9 @@
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_perfil"/>
 
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.utp.app_cafeteria.presentation.view.screens.cart.CartFragment"
+        tools:layout="@layout/fragment_cart" />
+
 </navigation>

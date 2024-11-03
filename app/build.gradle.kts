@@ -53,6 +53,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.material.v180) // O la versión más reciente
+    implementation ("com.google.android.material:material:1.9.0")
+
 
 
     implementation("org.postgresql:postgresql:42.6.0")

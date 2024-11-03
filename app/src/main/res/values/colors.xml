@@ -16,6 +16,8 @@
     <color name="campo_texto">#FFFFFF</color>
     <color name="borde_campo">#90A2C2</color>
     <color name="precio_producto">#08697B</color>
+    <color name="color_linea_nav">#BBD7E3</color>
+    <color name="letra_gris">#707274</color>
 
     <color name="eliminar_historial">#F72A4A</color>
     <color name="carrusel_inactivo">#DA0063</color>
