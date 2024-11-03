@@ -2,14 +2,14 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@+id/navigation_inicio"
-    android:id="@+id/mobile_navigation">
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_inicio">
 
     <fragment
-    android:id="@+id/navigation_inicio"
-    android:name="com.utp.app_cafeteria.presentation.view.screens.home.InicioFragment"
-    android:label="@string/title_home"
-    tools:layout="@layout/fragment_inicio" />
+        android:id="@+id/navigation_inicio"
+        android:name="com.utp.app_cafeteria.presentation.view.screens.home.InicioFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_inicio" />
 
     <fragment
         android:id="@+id/navigation_buscar"
