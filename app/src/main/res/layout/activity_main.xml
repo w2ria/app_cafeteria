@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:elevation="8dp"
+        app:itemActiveIndicatorStyle="@null"
         app:itemBackground="@drawable/bottom_nav_selector"
         app:itemIconSize="24dp"
         app:itemIconTint="@color/bottom_nav_effect"
