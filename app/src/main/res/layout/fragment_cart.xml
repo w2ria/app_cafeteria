@@ -87,7 +87,7 @@
                     android:layout_weight="1"
                     android:textSize="23sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/negro"
                     android:text="Total"
                     />
 
@@ -95,7 +95,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:color="@color/black"
+                    android:color="@color/negro"
                     android:textStyle="bold"
                     android:textSize="22sp"
                     android:text="S/0.00"
@@ -109,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60sp"
                 android:text="GENERAR ORDEN"
-                android:textColor="@color/white"
+                android:textColor="@color/blanco"
                 app:cornerRadius="2dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
