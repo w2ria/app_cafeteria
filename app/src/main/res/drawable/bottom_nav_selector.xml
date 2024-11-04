@@ -3,7 +3,7 @@
 
     <item android:state_checked="true">
         <layer-list>
-            <item android:gravity="bottom">
+            <item android:gravity="top">
                 <shape android:shape="rectangle">
                     <size android:height="3dp" />
                     <solid android:color="@color/navbar_activo" />
@@ -13,7 +13,7 @@
     </item>
     <item android:state_checked="false">
         <layer-list>
-            <item android:gravity="bottom">
+            <item android:gravity="top">
                 <shape android:shape="rectangle">
                     <size android:height="3dp" />
                     <solid android:color="@android:color/transparent" />

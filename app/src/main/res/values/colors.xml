@@ -4,6 +4,8 @@
     <color name="blanco">#FFFFFF</color>
     <color name="navbar_activo">#F72A4A</color>
     <color name="fondo_navbar">#FBFDFF</color>
+    <color name="linea_navbar">#90A2C2</color>
+
     <color name="fondo_principal">#E3ECF1</color>
     <color name="boton_principal">#682BED</color>
     <color name="tiempo_preparado">#DA7239</color>
