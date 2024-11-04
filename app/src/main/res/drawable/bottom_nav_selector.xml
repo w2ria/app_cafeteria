@@ -6,7 +6,7 @@
             <item android:gravity="bottom">
                 <shape android:shape="rectangle">
                     <size android:height="3dp" />
-                    <solid android:color="#F72A4A" />
+                    <solid android:color="@color/navbar_activo" />
                 </shape>
             </item>
         </layer-list>
