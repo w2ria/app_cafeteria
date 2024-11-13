@@ -22,6 +22,8 @@ class SplashActivity : AppCompatActivity() {
             delay(5000) // Espera 3 segundos
             // Después del retraso, inicia MainActivity
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            overridePendingTransition(R.anim.slide_fade_in, R.anim.fade_out)
+
             finish() // Finaliza el SplashActivity para que no regrese al presionar atrás
         }
     }

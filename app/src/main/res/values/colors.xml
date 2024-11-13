@@ -2,6 +2,7 @@
 <resources>
     <color name="negro">#000000</color>
     <color name="blanco">#FFFFFF</color>
+    <color name="fondo_splash">#FBFDFF</color>
     <color name="navbar_activo">#F72A4A</color>
     <color name="fondo_navbar">#FBFDFF</color>
     <color name="linea_navbar">#90A2C2</color>
