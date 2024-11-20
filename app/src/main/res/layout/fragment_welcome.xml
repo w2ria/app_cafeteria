@@ -1,59 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fondo_principal"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
     tools:context=".presentation.view.auth.WelcomeFragment">
+
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
-        android:layout_width="295dp"
-        android:layout_height="319dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="@string/animacion"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHeight_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"
+        app:layout_constraintWidth_percent="0.9"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/opcion24" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="323dp"
-        android:layout_height="71dp"
-        android:contentDescription="@string/logo"
-        android:scaleType="centerInside"
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/animationView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639"
-        app:srcCompat="@drawable/utp_logo" />
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="333dp"
-        android:layout_height="49dp"
-        android:fontFamily="@font/noto_sans"
-        android:text="@string/eslogan"
-        android:textAlignment="center"
-        android:textColor="@color/negro"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/logo"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/utp_logo" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="3sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/noto_sans"
+            android:text="@string/eslogan"
+            android:textAlignment="center"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            app:layout_constraintVertical_bias="0.706" />
 
 
+        <Button
+            android:id="@+id/btnIniciarSesion"
+            style="@style/BotonPrincipal_w"
+            android:layout_marginBottom="10dp"
+            android:drawableEnd="@drawable/icon_w1"
+            android:text="@string/iniciar"
+            tools:layout_editor_absoluteX="-18dp"
+            tools:layout_editor_absoluteY="533dp" />
 
-
+        <Button
+            android:id="@+id/btnRegistrarse"
+            style="@style/BotonSecundario_w"
+            android:drawableEnd="@drawable/icon_w2"
+            android:text="@string/registro"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="603dp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

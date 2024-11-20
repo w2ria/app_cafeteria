@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources><!-- Estilo de texto para ítems activos -->
+
+    <style name="BotonPrincipal_w" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_height">70sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="backgroundTint">@color/boton_principal</item>
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <style name="BotonSecundario_w" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginBottom">90dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/boton_principal</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/boton_principal</item>
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+
+
+
+
+
     <!-- Estilo para texto de ítems activos -->
     <style name="BottomNavTextActive" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">sans-serif</item> <!-- Usa una fuente predeterminada de Android -->
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <!-- Estilo para texto de ítems inactivos -->
     <style name="BottomNavTextInactive" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">15sp</item>
-        <item name="android:fontFamily">sans-serif</item> <!-- Usa una fuente predeterminada de Android -->
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
 </resources>

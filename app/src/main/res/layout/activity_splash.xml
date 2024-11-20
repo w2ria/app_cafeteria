@@ -14,48 +14,58 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
-        android:layout_width="295dp"
-        android:layout_height="319dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="@string/animacion"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHeight_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"
+        app:layout_constraintVertical_bias="0.89"
+        app:layout_constraintWidth_percent="0.9"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/opcion24" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="323dp"
-        android:layout_height="71dp"
-        android:contentDescription="@string/logo"
-        android:scaleType="centerInside"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/animationView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639"
-        app:srcCompat="@drawable/utp_logo" />
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="333dp"
-        android:layout_height="49dp"
-        android:fontFamily="@font/noto_sans"
-        android:text="@string/eslogan"
-        android:textAlignment="center"
-        android:textColor="@color/negro"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@string/logo"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/utp_logo"
+            />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="3sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/noto_sans"
+            android:text="@string/eslogan"
+            android:textAlignment="center"
+            android:textColor="@color/negro"
+            android:textSize="19sp"
+            app:layout_constraintVertical_bias="0.706" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView2"

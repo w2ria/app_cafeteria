@@ -1,7 +1,18 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string name="app_name">Cafetería UTP</string>
     <string name="logo">Logo UTP</string>
     <string name="animacion">Animación UTP</string>
+    <string name="iniciar">Iniciar Sesión</string>
+    <string name="registro">Registrarse</string>
+    <string name="correo">Ingresar Correo Institucional</string>
+    <string name="nombre">Ingresar Nombre</string>
+    <string name="contra">Ingresar Contraseña</string>
+    <string name="confirmar">Confirmar Contraseña</string>
+    <string name="crear">Crear Contraseña</string>
+    <string name="p_registro">¿No tienes una cuenta aún? <font color="#395E99"> ¡Regístrate aquí!</font></string>
+    <string name="p_iniciar">¿Ya tienes una cuenta? <font color="#395E99"> ¡Inicia sesión aquí!</font></string>
+    <string name="p_contra">¿Olvidaste tu contraseña? <font color="#395E99"> Recupérala aquí.</font></string>
+    <string name="btn_a">Atras</string>
     <string name="title_home">Inicio</string>
     <string name="title_search">Buscar</string>
     <string name="title_order">Órdenes</string>

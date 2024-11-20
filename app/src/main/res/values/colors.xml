@@ -2,7 +2,7 @@
 <resources>
     <color name="negro">#000000</color>
     <color name="blanco">#FFFFFF</color>
-    <color name="fondo_splash">#FBFDFF</color>
+    <color name="fondo_splash">#E3ECF1</color>
     <color name="linea_splash">#D5E4FA</color>
     <color name="navbar_activo">#F72A4A</color>
     <color name="fondo_navbar">#FBFDFF</color>
@@ -32,11 +32,11 @@
     <color name="carrusel_activo">#EC526C</color>
     <color name="categoria_producto">#EC526C</color>
     <color name="texto_link">#90A2C2</color>
+    <color name="pres_link">#395E99</color>
     <color name="id_orden">#F72A4A</color>
 
 
 
-    <color name="lime">#FF00E676</color>
     <color name="amber">#FFFFC107</color>
     <color name="deep_orange">#FFFF5722</color>
     <color name="grey">#FF9E9E9E</color>
