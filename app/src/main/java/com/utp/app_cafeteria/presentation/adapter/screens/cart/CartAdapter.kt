@@ -16,7 +16,7 @@ class CartAdapter(private val cartItems: List<CartItem>) :
         val productNameTextView: TextView = itemView.findViewById(R.id.txtNombreProducto)
         val productPriceTextView: TextView = itemView.findViewById(R.id.txtPrecio)
         val productQuantityTextView: TextView = itemView.findViewById(R.id.txtCantidad)
-        val productCategoryTextView: TextView = itemView.findViewById(R.id.txtCategoriaProducto)
+        val productCategoryTextView: TextView = itemView.findViewById(R.id.txtCodigoOrden)
         val productImgTextView: ImageView = itemView.findViewById(R.id.productoImg)
 
         // ... agregar más elementos
