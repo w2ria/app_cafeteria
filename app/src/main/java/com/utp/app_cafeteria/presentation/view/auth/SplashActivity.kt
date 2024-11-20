@@ -54,7 +54,7 @@ class SplashActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.Main).launch {
             for (char in text) {
                 textView.append(char.toString())
-                delay(20)
+                delay(10)
             }
         }
     }

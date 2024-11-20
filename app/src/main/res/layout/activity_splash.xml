@@ -29,8 +29,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="293dp"
-        android:layout_height="69dp"
+        android:layout_width="332dp"
+        android:layout_height="76dp"
         android:contentDescription="@string/logo"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,13 +43,13 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="324dp"
-        android:layout_height="50dp"
+        android:layout_width="333dp"
+        android:layout_height="49dp"
         android:fontFamily="@font/noto_sans"
         android:text="@string/eslogan"
         android:textAlignment="center"
-        android:textSize="18sp"
         android:textColor="@color/negro"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
