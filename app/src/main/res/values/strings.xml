@@ -6,5 +6,6 @@
     <string name="title_search">Buscar</string>
     <string name="title_order">Órdenes</string>
     <string name="title_profile">Perfil</string>
+    <string name="banner">Banner SplashScreen</string>
     <string name="eslogan">Tómate un respiro y recarga energías \n para lo que sigue en tu día</string>
 </resources>
