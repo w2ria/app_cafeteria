@@ -10,6 +10,7 @@ import com.airbnb.lottie.LottieAnimationView
 import com.utp.app_cafeteria.MainActivity
 import com.utp.app_cafeteria.R
 import kotlinx.coroutines.*
+import androidx.core.app.ActivityOptionsCompat
 
 class SplashActivity : AppCompatActivity() {
 
@@ -43,8 +44,12 @@ class SplashActivity : AppCompatActivity() {
 
         splashScope.launch {
             delay(5000)
-            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-            overridePendingTransition(R.anim.slide_fade_in, R.anim.fade_out)
+            val optionsCompat = ActivityOptionsCompat.makeCustomAnimation(
+                this@SplashActivity,
+                R.anim.slide_fade_in,
+                R.anim.fade_out
+            )
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java), optionsCompat.toBundle())
             finish()
         }
     }
