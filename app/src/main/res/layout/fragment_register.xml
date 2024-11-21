@@ -223,8 +223,7 @@
             style="@style/BotonPrincipal_w"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="40dp"
-            android:drawableEnd="@drawable/icon_w1"
-            android:text="@string/iniciar"
+            android:text="@string/registro"
             tools:layout_editor_absoluteX="-18dp"
             tools:layout_editor_absoluteY="533dp" />
 

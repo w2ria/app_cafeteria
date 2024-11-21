@@ -9,6 +9,16 @@
     <string name="contra">Ingresar Contraseña</string>
     <string name="confirmar">Confirmar Contraseña</string>
     <string name="crear">Crear Contraseña</string>
+    <string name="codigo">Enviar Código</string>
+    <string name="inCodigo">Ingresar Código</string>
+    <string name="verificar">Verificar</string>
+    <string name="restablecer">Restablecer contraseña</string>
+    <string name="m_verificacion">Por favor, ingresa los dígitos de tu código de \n verificación enviados a tu correo institucional </string>
+    <string name="recuperar">¿Olvidaste \nTu Contraseña?</string>
+    <string name="m_restablecer">¡Por favor escribe algo que recuerdes!</string>
+
+
+    <string name="m_recuperar">¡No te preocupes! Por favor, ingresa tu correo \n institucional  asociado a tu cuenta.</string>
     <string name="p_registro">¿No tienes una cuenta aún? <font color="#395E99"> ¡Regístrate aquí!</font></string>
     <string name="p_iniciar">¿Ya tienes una cuenta? <font color="#395E99"> ¡Inicia sesión aquí!</font></string>
     <string name="p_contra">¿Olvidaste tu contraseña? <font color="#395E99"> Recupérala aquí.</font></string>

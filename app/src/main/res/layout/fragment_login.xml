@@ -174,8 +174,7 @@
             android:id="@+id/btnIniciarSesion"
             style="@style/BotonPrincipal_w"
             android:layout_marginBottom="40dp"
-            android:drawableEnd="@drawable/icon_w1"
-            android:text="@string/registro"
+            android:text="@string/iniciar"
             tools:layout_editor_absoluteX="-18dp"
             tools:layout_editor_absoluteY="533dp" />
 

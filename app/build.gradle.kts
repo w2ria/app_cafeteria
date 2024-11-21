@@ -56,7 +56,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation (libs.material.v180) // O la versión más reciente
+    implementation (libs.material.v180)
     implementation ("com.google.android.material:material:1.9.0")
 
 
