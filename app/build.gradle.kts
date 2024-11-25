@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    kotlin("plugin.serialization") version "2.0.21"
 }
 
 android {
@@ -40,7 +42,8 @@ android {
 
 dependencies {
     implementation (libs.lottie)
-
+    implementation(platform("io.github.jan-tennert.supabase:bom:2.6.1"))
+    implementation("io.github.jan-tennert.supabase:postgrest-kt")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
