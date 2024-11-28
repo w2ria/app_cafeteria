@@ -12,9 +12,6 @@
     android:paddingBottom="20dp"
     tools:context=".presentation.view.auth.RegisterFragment">
 
-
-
-
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -31,8 +28,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-
-
     <ImageView
         android:id="@+id/btn_atras"
         android:layout_width="24dp"
@@ -47,7 +42,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/icon_regresar" />
-
 
     <TextView
         android:id="@+id/titleIniciar"
@@ -82,169 +76,166 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/opcion6" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <!-- ScrollView añadido -->
+    <android.widget.ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleIniciar"
-        app:layout_constraintVertical_bias="0.272"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@id/titleIniciar">
 
-
-        <TextView
-            android:id="@+id/nombreUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/nombre"
-            android:textColor="@color/negro"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
-
-        <EditText
-            android:id="@+id/inNombre"
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/campo_texto"
-            android:drawableEnd="@drawable/icon_user"
-            android:hint="Ingresar nombre"
-            android:inputType="textEmailAddress"
-            android:padding="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/correoInsti" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/correoInsti"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/correo"
-            android:textColor="@color/negro"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            <!-- Los elementos dentro del LinearLayout permanecen igual -->
+            <TextView
+                android:id="@+id/nombreUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/nombre"
+                android:textColor="@color/negro"
+                android:textSize="14sp" />
 
-        <EditText
-            android:id="@+id/inCorreo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/campo_texto"
-            android:drawableEnd="@drawable/icon_email"
-            android:hint="ejemplo@utp.edu.pe"
-            android:inputType="textEmailAddress"
-            android:padding="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/correoInsti" />
+            <EditText
+                android:id="@+id/inNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/campo_texto"
+                android:drawableEnd="@drawable/icon_user"
+                android:hint="Ingresar nombre"
+                android:inputType="textPersonName"
+                android:padding="12dp" />
 
-        <TextView
-            android:id="@+id/crearContra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/crear"
-            android:textColor="@color/negro"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            <TextView
+                android:id="@+id/correoInsti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/correo"
+                android:textColor="@color/negro"
+                android:textSize="14sp" />
 
-        <EditText
-            android:id="@+id/confiContra"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/campo_texto"
-            android:drawableEnd="@drawable/icon_ver"
-            android:hint="mínimo 8 caracteres"
-            android:inputType="textEmailAddress"
-            android:padding="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/correoInsti" />
+            <EditText
+                android:id="@+id/inCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/campo_texto"
+                android:drawableEnd="@drawable/icon_email"
+                android:hint="ejemplo@utp.edu.pe"
+                android:inputType="textEmailAddress"
+                android:padding="12dp" />
 
-        <!-- Campo de contraseña -->
-        <TextView
-            android:id="@+id/repContrasena"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/confirmar"
-            android:textColor="@color/negro"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/inCorreo" />
+            <TextView
+                android:id="@+id/crearContra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/crear"
+                android:textColor="@color/negro"
+                android:textSize="14sp" />
 
-        <EditText
-            android:id="@+id/inContra"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/campo_texto"
-            android:drawableEnd="@drawable/icon_ver"
-            android:hint="repetir contraseña"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/contrasena" />
+            <EditText
+                android:id="@+id/confiContra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/campo_texto"
+                android:drawableEnd="@drawable/icon_ver"
+                android:hint="mínimo 8 caracteres"
+                android:inputType="textEmailAddress"
+                android:padding="12dp" />
+
+            <!-- Campo de contraseña -->
+            <TextView
+                android:id="@+id/repContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/confirmar"
+                android:textColor="@color/negro"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/inContra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/campo_texto"
+                android:drawableEnd="@drawable/icon_ver"
+                android:hint="repetir contraseña"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/cell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/telefono"
+                android:textColor="@color/negro"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/inCell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/campo_texto"
+                android:drawableEnd="@drawable/icon_cell"
+                android:hint="Ingresar telefono"
+                android:inputType="phone"
+                android:padding="12dp" />
+
+            <Button
+                android:id="@+id/btnIniciarSesion"
+                style="@style/BotonPrincipal_w"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/registro" />
+
+            <TextView
+                android:id="@+id/pg_registro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/noto_sans"
+                android:text="@string/p_registro"
+                android:textColor="@color/texto_link"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
 
-        <Button
-            android:id="@+id/btnIniciarSesion"
-            style="@style/BotonPrincipal_w"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="40dp"
-            android:text="@string/registro"
-            tools:layout_editor_absoluteX="-18dp"
-            tools:layout_editor_absoluteY="533dp" />
-
-        <TextView
-            android:id="@+id/pg_registro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/noto_sans"
-            android:text="@string/p_registro"
-            android:textColor="@color/texto_link"
-            android:textSize="16sp"
-            android:textStyle="bold"
-
-            />
-
-
-    </LinearLayout>
+        </LinearLayout>
+    </android.widget.ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
