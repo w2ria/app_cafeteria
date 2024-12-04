@@ -42,9 +42,6 @@ android {
 
 dependencies {
     implementation (libs.lottie)
-    implementation(platform("io.github.jan-tennert.supabase:bom:2.6.1"))
-    implementation("io.github.jan-tennert.supabase:postgrest-kt")
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -60,8 +57,10 @@ dependencies {
     implementation (libs.material.v180)
     implementation ("com.google.android.material:material:1.9.0")
 
-
-
-    implementation("org.postgresql:postgresql:42.6.0")
+    // supabase
+    implementation ("io.ktor:ktor-client-core:2.0.0")
+    implementation ("io.ktor:ktor-client-cio:2.0.0")
+    implementation ("io.ktor:ktor-client-content-negotiation:2.0.0")
+    implementation ("io.ktor:ktor-serialization-gson:2.0.0")
 
 }

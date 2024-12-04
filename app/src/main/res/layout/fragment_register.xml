@@ -143,6 +143,31 @@
                 android:padding="12dp" />
 
             <TextView
+                android:id="@+id/cdigoInsti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/codEstudiante"
+                android:textColor="@color/negro"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/inCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/campo_texto"
+                android:drawableEnd="@drawable/icon_email"
+                android:hint="U432402983490"
+                android:inputType="textEmailAddress"
+                android:padding="12dp" />
+
+
+            <TextView
                 android:id="@+id/rol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -240,11 +265,20 @@
                 android:padding="12dp" />
 
             <Button
-                android:id="@+id/btnIniciarSesion"
+                android:id="@+id/btnRegistrar"
                 style="@style/BotonPrincipal_w"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="10dp"
                 android:text="@string/registro" />
+
+            <TextView
+                android:id="@+id/tvMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/pg_iniciar"

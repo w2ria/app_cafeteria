@@ -3,77 +3,110 @@ package com.utp.app_cafeteria.presentation.viewmodel.auth
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import io.ktor.client.*
+import io.ktor.client.engine.cio.*
+import io.ktor.client.plugins.contentnegotiation.*
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
+import io.ktor.http.*
+import io.ktor.serialization.gson.*
+import kotlinx.coroutines.launch
 
 class RegisterViewModel : ViewModel() {
+    private val _message = MutableLiveData<String>()
+    val message: LiveData<String> get() = _message
 
-    // LiveData para errores en el correo y la contraseña
-    private val _emailError = MutableLiveData<String?>()
-    val emailError: LiveData<String?> get() = _emailError
+    private val _rol = MutableLiveData<String?>()  // Permitir que el rol sea nulo al principio
+    val rol: LiveData<String?> get() = _rol
 
-    private val _passwordError = MutableLiveData<String?>()
-    val passwordError: LiveData<String?> get() = _passwordError
+    private val supabaseUrl = "https://tnzshzxssdtgthhbzmwk.supabase.co/rest/v1"
+    private val supabaseApiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRuenNoenhzc2R0Z3RoaGJ6bXdrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczMjc0MjgzMSwiZXhwIjoyMDQ4MzE4ODMxfQ.UmYtYJ_EOnc7wTnynb60PaEPQRJJtFr9sE_aBQn2Obs"
 
-    // LiveData para el estado del registro
-    private val _registerSuccess = MutableLiveData<Boolean>()
-    val registerSuccess: LiveData<Boolean> get() = _registerSuccess
+    private val client = HttpClient(CIO) {
+        install(ContentNegotiation) {
+            gson()
+        }
+    }
 
-    // Validar el correo
-    private fun validateEmail(email: String): Boolean {
+    // Validar correo con dominio específico
+    private fun validateEmail(correo: String): Boolean {
         val utpDomainPattern = "^[A-Za-z0-9._%+-]+@utp\\.edu\\.pe$".toRegex()
-        return if (utpDomainPattern.matches(email)) {
-            _emailError.value = null // Sin errores
-            true
-        } else {
-            _emailError.value = "El correo debe pertenecer al dominio @utp.edu.pe"
-            false
-        }
+        return utpDomainPattern.matches(correo)
     }
 
-    // Validar la contraseña
-    private fun validatePassword(password: String): Boolean {
-        return if (password.length >= 8) {
-            _passwordError.value = null // Sin errores
-            true
-        } else {
-            _passwordError.value = "La contraseña debe tener al menos 8 caracteres"
-            false
-        }
+    // Validar contraseña (al menos 8 caracteres)
+    private fun validatePassword(contrasenia: String): Boolean {
+        return contrasenia.length >= 8
     }
 
-    // Asignar el rol según la primera letra del correo
-    private fun assignRole(email: String): String {
+    // Asignar rol basado en la primera letra del correo
+    private fun assignRole(correo: String): String? {
         return when {
-            email.startsWith("u", true) -> "Estudiante"
-            email.startsWith("c", true) -> "Profesor"
-            else -> "Desconocido"
+            correo.startsWith("u", true) -> "Estudiante"
+            correo.startsWith("c", true) -> "Profesor"
+            else -> null // No acepta otros roles
         }
     }
 
-    // Registrar el cliente
-    fun registerClient(name: String, email: String, password: String, phone: String) {
-        if (validateEmail(email) && validatePassword(password)) {
-            val role = assignRole(email)
+    // Registrar cliente
+    fun registerCliente(
+        nombre: String,
+        correo: String,
+        codigo: String,
+        telefono: String,
+        contrasenia: String
+    ) {
+        // Validaciones de correo y contraseña
+        if (!validateEmail(correo)) {
+            _message.value = "El correo debe ser del dominio @utp.edu.pe"
+            return
+        }
+        if (!validatePassword(contrasenia)) {
+            _message.value = "La contraseña debe tener al menos 8 caracteres"
+            return
+        }
 
-            // Aquí puedes guardar en la base de datos (supabase) el cliente
-            // Crear un objeto cliente y guardarlo en la base de datos
-            // Ejemplo con Supabase (asegúrate de configurar el SDK de Supabase en tu proyecto)
-            val client = Client(name, email, password, phone, role)
+        // Asignar rol automáticamente
+        val rolAsignado = assignRole(correo)
+        if (rolAsignado == null) {
+            _message.value = "El correo debe empezar con 'u' para estudiante o 'c' para profesor"
+            return
+        }
 
-            // Supabase call to save the client
-            // supabaseClient.from("clients").insert(client)
+        _rol.value = rolAsignado // Establece el rol en el LiveData
 
-            _registerSuccess.value = true // Suponiendo que la inserción fue exitosa
-        } else {
-            _registerSuccess.value = false
+        // Enviar los datos al backend para registrar al cliente
+        viewModelScope.launch {
+            try {
+                val response: HttpResponse = client.post("$supabaseUrl/cliente") {
+                    header("apikey", supabaseApiKey)
+                    header("Authorization", "Bearer $supabaseApiKey")
+                    contentType(ContentType.Application.Json)
+                    setBody(
+                        mapOf(
+                            "nombre" to nombre,
+                            "correo" to correo,
+                            "codigo" to codigo,
+                            "rol" to rolAsignado,
+                            "telefono" to telefono,
+                            "contrasenia" to contrasenia
+                        )
+                    )
+                }
+
+                if (response.status == HttpStatusCode.Created) {
+                    _message.value = "Registro exitoso"
+                } else {
+                    // Extrae el cuerpo del error y lo muestra en el mensaje
+                    val errorBody: String = response.bodyAsText()
+                    _message.value = "Error al registrar: ${response.status.value} - $errorBody"
+                }
+            } catch (e: Exception) {
+                // Captura y muestra la excepción para identificar el problema
+                _message.value = "Excepción al registrar: ${e.localizedMessage}"
+            }
         }
     }
 }
 
-// Modelo de datos para el cliente
-data class Client(
-    val nombre: String,
-    val correo: String,
-    val contrasenia: String,
-    val telefono: String,
-    val rol: String
-)
