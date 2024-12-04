@@ -6,9 +6,11 @@
     <string name="registro">Registrarse</string>
     <string name="correo">Ingresar Correo Institucional</string>
     <string name="nombre">Ingresar Nombre</string>
+    <string name="rol">Rol del registrado</string>
     <string name="contra">Ingresar Contraseña</string>
     <string name="confirmar">Confirmar Contraseña</string>
     <string name="crear">Crear Contraseña</string>
+    <string name="telefono">Ingresar Teléfono</string>
     <string name="codigo">Enviar Código</string>
     <string name="inCodigo">Ingresar Código</string>
     <string name="verificar">Verificar</string>

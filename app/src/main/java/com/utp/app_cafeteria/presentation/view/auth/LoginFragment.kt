@@ -1,32 +1,68 @@
 package com.utp.app_cafeteria.presentation.view.auth
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.utp.app_cafeteria.R
 import com.utp.app_cafeteria.presentation.viewmodel.auth.LoginViewModel
 
-class LoginFragment : Fragment() {
+class LoginFragment : Fragment(R.layout.fragment_login) {
 
-    companion object {
-        fun newInstance() = LoginFragment()
-    }
+    private val loginViewModel: LoginViewModel by viewModels()
 
-    private val viewModel: LoginViewModel by viewModels()
+    private lateinit var emailField: EditText
+    private lateinit var passwordField: EditText
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // TODO: Use the ViewModel
-    }
+        // Vincular elementos de la UI
+        emailField = view.findViewById(R.id.inCorreo)
+        passwordField = view.findViewById(R.id.inContrasena)
+        val loginButton = view.findViewById<View>(R.id.btnIniciarSesion)
+        val backButton = view.findViewById<View>(R.id.btn_atras)
+        val pgRegistro = view.findViewById<TextView>(R.id.pg_registro)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+
+        // Observa errores en el correo
+        loginViewModel.emailError.observe(viewLifecycleOwner) { error ->
+            emailField.error = error
+        }
+
+        // Observa el estado del login
+        loginViewModel.loginSuccess.observe(viewLifecycleOwner) { success ->
+            if (success) {
+                Toast.makeText(requireContext(), "Login exitoso", Toast.LENGTH_SHORT).show()
+                // Navegar a otra pantalla
+            } else {
+                Toast.makeText(requireContext(), "Login fallido. Verifica tus datos.", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        // Configura la acción del botón de inicio de sesión
+        loginButton.setOnClickListener {
+            val email = emailField.text.toString()
+            val password = passwordField.text.toString()
+            loginViewModel.login(email, password)
+        }
+
+        backButton.setOnClickListener {
+            findNavController().popBackStack() // Regresar al fragmento anterior
+        }
+
+        pgRegistro.setOnClickListener {
+            // Navegar al fragmento de Registro
+            findNavController().navigate(R.id.register)
+        }
+
+
+
+
+
     }
 }

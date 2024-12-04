@@ -6,7 +6,8 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
+import com.utp.app_cafeteria.presentation.view.auth.SplashActivity
+import com.utp.app_cafeteria.presentation.view.auth.RegisterFragment
 
 class MainActivity : AppCompatActivity() {
 

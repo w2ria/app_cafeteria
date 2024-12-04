@@ -143,6 +143,30 @@
                 android:padding="12dp" />
 
             <TextView
+                android:id="@+id/rol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/rol"
+                android:textColor="@color/negro"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/inRol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/campo_texto"
+                android:drawableEnd="@drawable/icon_rol"
+                android:hint="Estudiante / Profesor"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <TextView
                 android:id="@+id/crearContra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -186,7 +210,7 @@
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/campo_texto"
-                android:drawableEnd="@drawable/icon_ver"
+                android:drawableEnd="@drawable/icon_oculto"
                 android:hint="repetir contraseña"
                 android:inputType="textPassword"
                 android:padding="12dp" />
@@ -223,16 +247,19 @@
                 android:text="@string/registro" />
 
             <TextView
-                android:id="@+id/pg_registro"
+                android:id="@+id/pg_iniciar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="60dp"
                 android:fontFamily="@font/noto_sans"
-                android:text="@string/p_registro"
+                android:text="@string/p_iniciar"
                 android:textColor="@color/texto_link"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"/>
 
 
         </LinearLayout>

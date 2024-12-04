@@ -185,12 +185,13 @@
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/noto_sans"
-            android:text="@string/p_iniciar"
+            android:text="@string/p_registro"
             android:textColor="@color/texto_link"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
 
-            />
 
 
     </LinearLayout>
