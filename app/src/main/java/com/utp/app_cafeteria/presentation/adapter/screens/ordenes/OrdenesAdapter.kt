@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.utp.app_cafeteria.R
 import com.utp.app_cafeteria.data.entities.OrdenesITem
 
-class OrdenesAdapter(private val ordenesList: List<OrdenesITem>) :
+class OrdenesAdapter(private var ordenesList: List<OrdenesITem>) :
     RecyclerView.Adapter<OrdenesAdapter.OrdenesViewHolder>() {
 
     class OrdenesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -26,13 +26,19 @@ class OrdenesAdapter(private val ordenesList: List<OrdenesITem>) :
 
     override fun onBindViewHolder(holder: OrdenesViewHolder, position: Int) {
         val currentOrden = ordenesList[position]
-        holder.codigoOrdenTextView.text = currentOrden.codigoOrden
-        holder.estadoDetalleTextView.text = currentOrden.estado
-        holder.fechaDetalleTextView.text = currentOrden.fecha
-        holder.precioDetalleTextView.text = "S/ ${currentOrden.precio}"
+        holder.codigoOrdenTextView.text = "OR000000${currentOrden.id_orden}"
+        holder.estadoDetalleTextView.text = "${currentOrden.id_estado}"
+        holder.fechaDetalleTextView.text = "${currentOrden.fecha}"
+        holder.precioDetalleTextView.text = "S/ ${currentOrden.total}"
     }
 
     override fun getItemCount(): Int {
         return ordenesList.size
+    }
+
+    // Método para actualizar la lista de datos en el adaptador
+    fun updateData(newOrdenesList: List<OrdenesITem>) {
+        ordenesList = newOrdenesList
+        notifyDataSetChanged() // Notificar al adaptador que los datos han cambiado
     }
 }
