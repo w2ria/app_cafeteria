@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,8 +7,7 @@
     android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp"
     android:background="@drawable/bg_container_blanco"
-    android:radius="8dp"
-    >
+    android:radius="8dp">
 
     <ImageView
         android:id="@+id/productoImg"
@@ -32,9 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
+        android:maxLines="1"
         android:text="CATEGORÍA"
         android:textColor="@color/categoria_producto"
-        android:maxLines="1"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/productoImg"
@@ -45,14 +43,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
         android:text="NOMBRE DEL PRODUCTO"
         android:textColor="@color/negro"
-        android:textStyle="bold"
         android:textSize="16sp"
-        android:maxLines="2"
-        android:ellipsize="end"
-        app:layout_constraintStart_toEndOf="@+id/productoImg"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/productoImg"
         app:layout_constraintTop_toBottomOf="@+id/txtCodigoCategoriaa" />
 
 
@@ -71,7 +69,7 @@
             android:id="@+id/constraintLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_btn_verde"
+            android:background="@drawable/bg_btn_naranja"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -84,51 +82,56 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="2dp"
                 android:layout_marginBottom="2dp"
-                android:background="@drawable/bg_container_blanco"
-                android:text=" S/0.00 "
-                android:textColor="@color/precio_producto"
+                android:text=" 3 mins "
+                android:textColor="@color/blanco"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/txtCantidad"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cantidad: 0"
-            android:textColor="@color/letra_gris"
-            android:gravity="center"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/bg_btn_verde"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/txtBtnEditar"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.545" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/txtBtnEditar"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/bg_btn_morado_claro"
-            android:gravity="center"
-            android:src="@drawable/icon_editar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/txtBtnAgregarCarrito"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:text=" S/5.00 "
+                android:textColor="@color/blanco"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
             android:id="@+id/txtBtnAgregarCarrito"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_margin="2dp"
-            android:background="@drawable/bg_btn_rosado_claro"
+            android:background="@drawable/bg_btn_morado_claro"
             android:gravity="center"
-            android:src="@drawable/icon_eliminar"
+            android:text="+"
+            android:textColor="@color/boton_editar"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

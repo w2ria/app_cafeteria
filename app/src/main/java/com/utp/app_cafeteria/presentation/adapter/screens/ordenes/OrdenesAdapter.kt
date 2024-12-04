@@ -12,7 +12,7 @@ class OrdenesAdapter(private var ordenesList: List<OrdenesITem>) :
     RecyclerView.Adapter<OrdenesAdapter.OrdenesViewHolder>() {
 
     class OrdenesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val codigoOrdenTextView: TextView = itemView.findViewById(R.id.txtCodigoOrden)
+        val codigoOrdenTextView: TextView = itemView.findViewById(R.id.txtCodigoCategoriaa)
         val estadoDetalleTextView: TextView = itemView.findViewById(R.id.txtEstadoDetalle)
         val fechaDetalleTextView: TextView = itemView.findViewById(R.id.txtFechaDetalle)
         val precioDetalleTextView: TextView = itemView.findViewById(R.id.txtPrecioDetalle)

@@ -14,9 +14,9 @@ class CartAdapter(private val cartItems: List<CartItem>) :
     class CartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // viewholder_cart.xml
         val productNameTextView: TextView = itemView.findViewById(R.id.txtNombreProducto)
-        val productPriceTextView: TextView = itemView.findViewById(R.id.txtPrecio)
+        val productPriceTextView: TextView = itemView.findViewById(R.id.txtTiempo)
         val productQuantityTextView: TextView = itemView.findViewById(R.id.txtCantidad)
-        val productCategoryTextView: TextView = itemView.findViewById(R.id.txtCodigoOrden)
+        val productCategoryTextView: TextView = itemView.findViewById(R.id.txtCodigoCategoriaa)
         val productImgTextView: ImageView = itemView.findViewById(R.id.productoImg)
 
         // ... agregar más elementos
