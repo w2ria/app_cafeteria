@@ -40,6 +40,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 Toast.makeText(requireContext(), "Login exitoso", Toast.LENGTH_SHORT).show()
                 // Navegar al fragmento de inicio
                 findNavController().navigate(R.id.navigation_inicio)
+                val navView: View? = activity?.findViewById(R.id.nav_view)
+                navView?.visibility = View.VISIBLE
             } else {
                 Toast.makeText(requireContext(), "Login fallido. Verifica tus datos.", Toast.LENGTH_SHORT).show()
             }
