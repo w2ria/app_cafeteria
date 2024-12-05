@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.utp.app_cafeteria.R
 import com.utp.app_cafeteria.presentation.viewmodel.auth.RegisterViewModel
 
@@ -35,6 +36,7 @@ class RegisterFragment : Fragment() {
     ): View? {
         val binding = inflater.inflate(R.layout.fragment_register, container, false)
 
+
         // Inicializar vistas
         nombreEditText = binding.findViewById(R.id.inNombre)
         correoEditText = binding.findViewById(R.id.inCorreo)
@@ -45,6 +47,9 @@ class RegisterFragment : Fragment() {
         telefonoEditText = binding.findViewById(R.id.inCell)
         btnRegistrar = binding.findViewById(R.id.btnRegistrar)
         tvMensaje = binding.findViewById(R.id.tvMensaje)
+
+        val backButton = binding.findViewById<View>(R.id.btn_atras) // Botón de atrás
+        val pgIniciar = binding.findViewById<TextView>(R.id.pg_iniciar)
 
         // Deshabilitar los campos de código y rol
         codigoEditText.isEnabled = false
@@ -114,6 +119,14 @@ class RegisterFragment : Fragment() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
+        backButton.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        // Acción del texto pg_iniciar para redirigir al login
+        pgIniciar.setOnClickListener {
+            findNavController().navigate(R.id.login)
+        }
 
         return binding
     }
@@ -136,5 +149,10 @@ class RegisterFragment : Fragment() {
             // Si no cumple con el patrón, devolver null
             Pair(null, null)
         }
+
+
+
+
     }
+
 }
