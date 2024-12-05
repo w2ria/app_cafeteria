@@ -71,6 +71,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.material.v180)
     implementation ("com.google.android.material:material:1.9.0")
+    implementation ("com.squareup.picasso:picasso:2.71828")
 
     // supabase
     implementation ("io.ktor:ktor-client-core:2.0.0")

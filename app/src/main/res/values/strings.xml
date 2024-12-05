@@ -18,8 +18,7 @@
     <string name="m_verificacion">Por favor, ingresa los dígitos de tu código de \n verificación enviados a tu correo institucional </string>
     <string name="recuperar">¿Olvidaste \nTu Contraseña?</string>
     <string name="m_restablecer">¡Por favor escribe algo que recuerdes!</string>
-    <string name="codEstudiante">Ingresar código de estudian</string>
-
+    <string name="codigoInst">Código instituacional</string>
 
 
     <string name="m_recuperar">¡No te preocupes! Por favor, ingresa tu correo \n institucional  asociado a tu cuenta.</string>
