@@ -38,11 +38,13 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         loginViewModel.loginSuccess.observe(viewLifecycleOwner) { success ->
             if (success) {
                 Toast.makeText(requireContext(), "Login exitoso", Toast.LENGTH_SHORT).show()
-                // Navegar a otra pantalla
+                // Navegar al fragmento de inicio
+                findNavController().navigate(R.id.navigation_inicio)
             } else {
                 Toast.makeText(requireContext(), "Login fallido. Verifica tus datos.", Toast.LENGTH_SHORT).show()
             }
         }
+
 
         // Configura la acción del botón de inicio de sesión
         loginButton.setOnClickListener {
