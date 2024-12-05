@@ -27,9 +27,27 @@ class BuscarAdapter(private var productosList: List<ProductoItem>) :
         return BuscarViewHolder(itemView)
     }
 
+    val categorias = listOf(
+        Pair(1, "Cafés"),
+        Pair(2, "Jugos"),
+        Pair(3, "Bebidas"),
+        Pair(4, "Sandwiches"),
+        Pair(5, "Postres"),
+        Pair(6, "Desayunos"),
+        Pair(7, "Combos"),
+        Pair(8, "Snacks"),
+        Pair(9, "Menú"),
+        Pair(10, "Comidas Saludables"),
+        Pair(11, "Especial del día"),
+        Pair(12, "Pizza")
+    )
+
+    val categoriaMap = categorias.toMap()
+
     override fun onBindViewHolder(holder: BuscarViewHolder, position: Int) {
         val currentProducto = productosList[position]
-        holder.codigoCategoriaTextView.text = "${currentProducto.id_categoria}"
+        val nombreCategoria = categoriaMap[currentProducto.id_categoria.toInt()] ?: "Categoría desconocida"
+        holder.codigoCategoriaTextView.text = "${nombreCategoria.uppercase()}"
         holder.nombreProductoTextView.text = currentProducto.nombre
         holder.tiempoProductoTextView.text = " 0 mins. "
         /*holder.tiempoProductoTextView.text = "${currentProducto.descripcion ?: 0} mins."*/

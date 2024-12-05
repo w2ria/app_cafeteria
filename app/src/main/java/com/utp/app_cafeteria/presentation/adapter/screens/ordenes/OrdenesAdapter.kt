@@ -24,10 +24,23 @@ class OrdenesAdapter(private var ordenesList: List<OrdenesITem>) :
         return OrdenesViewHolder(itemView)
     }
 
+    val estados = listOf(
+        Pair(1, "pendiente"),
+        Pair(2, "pendiente de pago"),
+        Pair(3, "en proceso"),
+        Pair(4, "pendiente de recojo"),
+        Pair(5, "cancelado"),
+        Pair(6, "completado")
+    )
+
+    val estadoMap = estados.toMap()
+
+
     override fun onBindViewHolder(holder: OrdenesViewHolder, position: Int) {
         val currentOrden = ordenesList[position]
+        val estadoDescripcion = estadoMap[currentOrden.id_estado.toInt()] ?: "Estado desconocido"
         holder.codigoOrdenTextView.text = "OR000000${currentOrden.id_orden}"
-        holder.estadoDetalleTextView.text = "${currentOrden.id_estado}"
+        holder.estadoDetalleTextView.text = "${estadoDescripcion.uppercase()}"
         holder.fechaDetalleTextView.text = "${currentOrden.fecha}"
         holder.precioDetalleTextView.text = "S/ ${currentOrden.total}"
     }
